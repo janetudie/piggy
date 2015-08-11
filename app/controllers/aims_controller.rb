@@ -25,6 +25,24 @@ class AimsController < ApplicationController
 		@aim.destroy
 	end
 
+	def add_green
+		@aim = Aim.find(params[:id])
+		@green = @aim.build_green
+		@green.user_id = current_user.id
+		@green.save
+
+		redirect_to @aim
+	end
+
+	def add_red
+		@aim = Aim.find(params[:id])
+		@red = @aim.build_red
+		@red.user_id = current_user.id
+		@red.save
+
+		redirect_to @aim
+	end
+
 	private
 
 		def aim_params
