@@ -1,8 +1,8 @@
 class CreateReds < ActiveRecord::Migration
   def change
     create_table :reds do |t|
-      t.aim :references
-      t.user :references
+      t.references :aim
+      t.references :user
 
       t.timestamps null: false
     end

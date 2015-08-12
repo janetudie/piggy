@@ -9,3 +9,11 @@ display counts for those two
 
 
 -->
+<%= @aim.description %>
+
+
+<%= @aim.greens.count %>
+<%=button_to "O", aim_greens_path(@aim), method: :post %>
+
+<%= @aim.reds.count %>
+<%=button_to "X", aim_reds_path(@aim), method: :post %>

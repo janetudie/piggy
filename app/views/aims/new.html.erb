@@ -7,3 +7,7 @@ form to add an aim
 
 
 	-->
+<%= form_for @aim do |f| %>
+  Description: <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

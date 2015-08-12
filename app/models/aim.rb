@@ -1,6 +1,6 @@
 class Aim < ActiveRecord::Base
-	has_many :reds, dependent: destroy
-	has_many :greens, dependent: destroy
+	has_many :reds, dependent: :destroy
+	has_many :greens, dependent: :destroy
 
 	belongs_to :user
 
