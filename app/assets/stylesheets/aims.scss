@@ -1,3 +1,52 @@
 // Place all the styles related to the aims controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.aims-index {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+}
+
+/* Issues
+	- ombre effect in each list item
+	- responsive height
+*/
+
+
+.list-item {
+
+	.aim-link {
+		display: table;
+		width: 100%;
+		min-width: 33%;
+
+		&:hover {
+			background-color: #333;
+			color: #e3e3e3;
+		}
+	}
+
+	&.aim-list-item {
+		background-color: #abcdef;
+	}
+
+	&.last-list-item {
+		background-color: #ccc;
+	}
+
+	.aim-description-container {
+		display: table-cell;
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+}
+
+.logout-link {
+
+}
+

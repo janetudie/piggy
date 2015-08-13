@@ -1,3 +1,18 @@
-AIMS INDEX
 
-<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+<ul class="aims-index">
+	<% @aims.each do |aim| %>
+		<li class="list-item aim-list-item">
+			<%= link_to aim, class: "aim-link" do %>
+		 		<div class="aim-description-container"><%= aim.description %></div>
+			<% end %> 
+		</li>
+	<% end %>
+		<li class="list-item last-list-item">
+			<%= link_to new_aim_path, class: "aim-link aim-new" do %>
+			<div class="aim-description-container">New</div>
+			<% end %> 
+		</li> 
+</ul>
+
+
+<p class="logout-link"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></p>
